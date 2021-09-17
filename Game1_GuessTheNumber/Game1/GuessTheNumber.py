@@ -1,0 +1,32 @@
+'''
+Created on Jul 07, 2021
+
+@Author:jmhuertasg
+'''
+from random import randint
+'''
+1. Change the number range from 1 to 1.000.000
+2. Game should ask us to guess a number
+3. Give a clue of number is higher or lower then the guess
+4. Inform the player if he won
+'''
+
+start = 1
+end = 1000
+value = randint(start, end)
+
+print("The computer choose a number between ",start, " and ", end)
+
+guess = None
+while guess != value:
+    text=input("Guess the number:")
+    guess= int(text)
+
+    if guess < value:
+        print("The number is Higher")
+    elif guess > value:
+        print("The number is Lower")
+
+print("Congratulation!!!!, You guessed the number. You won")
+
+
